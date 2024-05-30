@@ -1,14 +1,20 @@
 # Review 1
+# nothing to be modified
 def add_to_list(value, my_list=[]):
     my_list.append(value)
     return my_list
 
 # Review 2
+# Originally, the function returned a string with variables name and age, but
+# it is not a f-string, so I just added a character "f" before the string returned.
 def format_greeting(name, age):
     # string format using f-string 
     return f"Hello, my name is {name} and I am {age} years old."
 
 # Review 3
+# Originally, the count variable is initialize outside of __init__(self),
+# so we need to place the count variable inside __init__(self) and define 
+# another method called increment
 class Counter:
     # count = 0
 
@@ -28,6 +34,8 @@ class Counter:
         return self.count
 
 # Review 4
+# Originally, the statement t.start() was implemented before the appending of threads,
+# so we need to reorder these two statements.
 import threading
 
 class SafeCounter:
@@ -63,6 +71,7 @@ for t in threads:
 
 # Review 5
 import time
+# Originally the increment operation for counts[item] was "=+", it supposes to be "+=".
 def count_occurrences(lst):
     # increment operation should be "+="
     counts = {}
